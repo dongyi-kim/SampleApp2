@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--가장 외부에 있는 레이아웃이 액티비티 전체의 레이아웃을 대표합니다 -->
+<!-- RelativeLayout은 자식 View들이 모두 서로에 대해 상대적인 위치에 존재함을 의미합니다 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hello.sampleapp.MainActivity">
+
+
+    <!--padding이란 view내부의 여백을 말합니다-->
+
+    <!--layout_height, width는 직접 사이즈를 지정하거나 아래의 키워드로 지정할 수 있습니다 -->
+
+    <!--match parent : 부모 view의 크기에 맞춥니다 -->
+    <!--wrap content : 자식 view들의 크기에 맞춥니다-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--xml파일은 안드로이드에게 화면 구성을 알려주는 역할만을 합니다-->
+        <!--이후에 실제 생성된 객체에 접근하기 위해 id를 배정해야합니다 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:id="@+id/my_text_view"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/my_bottom_button"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/my_second_button"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
